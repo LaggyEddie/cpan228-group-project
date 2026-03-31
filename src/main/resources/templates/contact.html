@@ -1,78 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .contact-form {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-            color: #555;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Contact</title>
+    <link th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
+
 <body>
-    <div class="contact-form">
-        <h1>Six Seeeeeeeeeveeeeeeen</h1>
-        <form method="POST" action="/contact">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
+
+<nav class="navbar navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">Clothes Warehouse</a>
     </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="card p-4">
+
+        <h2 class="text-center mb-3">Contact Us</h2>
+
+        <!-- MESSAGE -->
+        <div th:if="${message}" class="alert alert-success text-center">
+            <span th:text="${message}"></span>
+        </div>
+
+        <form method="POST" action="/contact">
+
+            <input class="form-control mb-3" name="name" placeholder="Your Name" required>
+
+            <input class="form-control mb-3" name="email" type="email" placeholder="Your Email" required>
+
+            <input class="form-control mb-3" name="subject" placeholder="Subject" required>
+
+            <textarea class="form-control mb-3" name="message" placeholder="Message" rows="4" required></textarea>
+
+            <button class="btn btn-primary w-100">Send Message</button>
+
+        </form>
+
+    </div>
+</div>
+
 </body>
 </html>

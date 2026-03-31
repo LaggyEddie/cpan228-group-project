@@ -1,51 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        nav {
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #0066cc;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-    </style>
+
+    <!-- Bootstrap -->
+    <link th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
+
 <body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <h1>ovuvuevuevue enyetuenwuevue ugbemugbem osas</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </nav>
-</h1>
-</h1>
-        <p>my name is uh... ovuvuevuevue enyetuenwuevue ugbemugbem osas</p>
+        <a class="navbar-brand" href="/">Clothes Warehouse</a>
+
+        <div>
+            <a class="btn btn-light me-2" href="/items">Inventory</a>
+            <a class="btn btn-outline-light" href="/contact">Contact</a>
+        </div>
     </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="container hero text-center">
+
+    <h1>Welcome to Clothes Warehouse</h1>
+
+    <p class="mt-3">
+        A modern inventory management system to manage your clothing items efficiently.
+    </p>
+
+    <div class="mt-4">
+        <a href="/items" class="btn btn-primary me-2">View Inventory</a>
+        <a href="/contact" class="btn btn-secondary">Contact Us</a>
+    </div>
+
+</div>
+
+<!-- Features Section -->
+<div class="container mt-5">
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card text-center p-4 h-100">
+                <h4>Manage Inventory</h4>
+                <p class="mt-2">Add, update, and delete clothing items easily.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-center p-4 h-100">
+                <h4>Organized Data</h4>
+                <p class="mt-2">View items with sorting, filtering, and pagination.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-center p-4 h-100">
+                <h4>Fast and Clean</h4>
+                <p class="mt-2">Built using Spring Boot with a clean UI design.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-5">
+    <div class="container text-center">
+        <p class="mb-0">© 2026 Clothes Warehouse</p>
+    </div>
+</footer>
+
 </body>
 </html>

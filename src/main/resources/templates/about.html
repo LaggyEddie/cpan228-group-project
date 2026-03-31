@@ -1,43 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
+    <title>About</title>
+    <link th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
+
 <body>
+
+<nav class="navbar navbar-dark">
     <div class="container">
-        <h1>About Canada</h1>
-        <p>Welcome to our page. We are a dedicated team committed to delivering quality solutions.</p>
-        
-        <h2>Our Mission</h2>
-        <p>To provide excellent service and support to our users.</p>
-        
-        <h2>Our Team</h2>
-        <p>Our team consists of talented professionals with years of experience in the industry.</p>
+        <a class="navbar-brand" href="/">Clothes Warehouse</a>
     </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="card p-4">
+
+        <h2>About This Project</h2>
+        <p>This is a modern clothing inventory system built using Spring Boot and Thymeleaf.</p>
+
+    </div>
+</div>
+
 </body>
 </html>
