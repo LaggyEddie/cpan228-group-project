@@ -1,4 +1,4 @@
-package ca.humber.thebestgroup.model;
+package ca.humber.the_best_group.model;
 
 public class Contact {
 
