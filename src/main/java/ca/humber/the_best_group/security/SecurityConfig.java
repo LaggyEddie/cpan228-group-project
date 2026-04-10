@@ -24,7 +24,7 @@ public class SecurityConfig {
         return http.authorizeHttpRequests(authorize -> authorize
                     .requestMatchers("/inventory/**").hasAnyRole("STAFF", "MANAGER")
                     .requestMatchers("/management/**").hasRole("MANAGER") 
-                    .requestMatchers("/", "/js/**", "/css/**", "/images/**", "/permission-denied", "/h2-console/**").permitAll()
+                    .requestMatchers("/", "/js/**", "/css/**", "/images/**", "/h2-console/**").permitAll()
                     .anyRequest().authenticated()
                 )
                 .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"))

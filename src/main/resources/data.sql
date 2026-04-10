@@ -1,5 +1,4 @@
 --passwords are "1111"
-
 INSERT INTO sec_user (email, encryptedPassword, enabled)
 VALUES ('worker@warehouse.ca', '$2a$12$88UzWYqtLsl3918w7qCiYOJ/woshfWQjdYStSsgiXHcwCa07KpTXS', 1);
 
